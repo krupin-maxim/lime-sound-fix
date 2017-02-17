@@ -1,0 +1,10 @@
+--- legacy/project/src/openal/OpenALSound.h	Wed Mar 23 13:19:03 2016 +0700
++++ legacy/project/src/openal/OpenALSound.h	Mon Feb 13 14:25:17 2017 +0700
+@@ -207,6 +207,7 @@
+          void stop();
+          void suspend();
+          void resume();
++         void release();
+          
+       protected:
+          ~OpenALChannel();

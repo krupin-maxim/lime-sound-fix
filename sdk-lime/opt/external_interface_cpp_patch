@@ -1,0 +1,10 @@
+--- legacy/project/src/common/ExternalInterface.cpp	Wed Mar 23 13:19:03 2016 +0700
++++ legacy/project/src/common/ExternalInterface.cpp	Mon Feb 13 14:24:22 2017 +0700
+@@ -4444,6 +4444,7 @@
+    if (AbstractToObject(inChannel,channel))
+    {
+       channel->stop();
++      channel->release();
+    }
+    return alloc_null();
+ }

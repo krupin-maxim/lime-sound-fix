@@ -1,0 +1,24 @@
+--- legacy/project/src/openal/OpenALSound.cpp	Wed Mar 23 13:19:03 2016 +0700
++++ legacy/project/src/openal/OpenALSound.cpp	Mon Feb 13 14:24:47 2017 +0700
+@@ -185,6 +185,13 @@
+       }
+    }
+    
++   void OpenALChannel::release()
++   {
++      LOG_SOUND("Hello from max: OpenALChannel::release\n");
++      if (mSourceID)
++         alDeleteSources(1, &mSourceID);
++      mSourceID = 0;
++   }
+    
+    bool OpenALChannel::needsData()
+    {
+@@ -321,6 +328,7 @@
+          }
+          else
+          {
++            release();
+             return true;
+          }
+          //LOG_SOUND("OpenALChannel isComplete() returning true");
