@@ -3,7 +3,7 @@ function docker_build() {
     IMAGE=$1
     IMG_NAME="$IMAGE"
 
-    docker build -t $IMG_NAME $IMAGE
+    #docker build -t $IMG_NAME $IMAGE
     if [[ "$(docker images -q $IMG_NAME 2> /dev/null)" == "" ]]; then
         docker build -t $IMG_NAME $IMAGE
     else
