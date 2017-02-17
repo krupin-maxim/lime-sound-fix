@@ -6,7 +6,7 @@
     
 +   void OpenALChannel::release()
 +   {
-+      LOG_SOUND("Hello from max: OpenALChannel::release\n");
++      //LOG_SOUND("Hello from max: OpenALChannel::release\n");
 +      if (mSourceID)
 +         alDeleteSources(1, &mSourceID);
 +      mSourceID = 0;
