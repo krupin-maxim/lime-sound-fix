@@ -100,7 +100,7 @@ ENV ANDROID_SETUP true
 
 #Install haxe libraries
 RUN yes|haxelib install hxcpp 3.2.193 
-RUN yes|haxelib install format 
+RUN yes|haxelib install format 3.2.1
 
 RUN cd $HAXELIB_PATH && \
     mkdir lime && \
